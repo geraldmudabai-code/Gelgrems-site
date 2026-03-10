@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products - Gelgrems</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="products-page">
+    <header class="site-header products-header">
+      <div class="container header-inner">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="url(#grad2)"/>
+              <text x="20" y="28" font-size="24" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">G</text>
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#a79999;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#d3cccc;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h1 class="brand"><a href="index.html" style="text-decoration: none; color: inherit;">Gelgrems</a></h1>
+        </div>
+        <nav class="nav-actions">
+          <a href="index.html" class="nav-link">Shop</a>
+          <a href="products.html" class="nav-link active">Products</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-hero">
+        <h2>Our Premium Collection</h2>
+        <p>Handpicked snacks, carefully crafted for your enjoyment</p>
+      </section>
+
+      <section class="products-showcase">
+        <div class="products-filter">
+          <h3>Filter by Category</h3>
+          <select id="categoryFilter" class="filter-select">
+            <option value="all">All Categories</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Savory">Savory</option>
+            <option value="Dessert">Dessert</option>
+          </select>
+        </div>
+
+        <div id="productsGrid" class="products-grid-page"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Gelgrems</h4>
+          <p>Premium quality snacks, responsibly sourced and carefully crafted.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Shop</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>Phone: 07013223028 | 08030935729</p>
+          <p>Email: geraldmudab@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gelgrems. Built with ♥</p>
+      </div>
+    </footer>
+
+    <script>
+      // Simple product display for products page
+      const products = [
+        { name: 'Chin Chin', price: '$2.50', category: 'Snacks' },
+        { name: 'Chops', price: '$3.00', category: 'Savory' },
+        { name: 'Donuts', price: '$1.75', category: 'Dessert' },
+        { name: 'Egg roll', price: '$2.00', category: 'Savory' },
+        { name: 'Meat-pie', price: '$2.25', category: 'Savory' },
+        { name: 'Bread-sausage roll', price: '$1.25', category: 'Savory' },
+      ];
+
+      const grid = document.getElementById('productsGrid');
+      products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card-simple';
+        card.innerHTML = `
+          <div class="product-placeholder"></div>
+          <h4>${product.name}</h4>
+          <p class="category">${product.category}</p>
+          <p class="price">${product.price}</p>
+        `;
+        grid.appendChild(card);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us - Gelgrems</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="contact-page">
+    <header class="site-header contact-header">
+      <div class="container header-inner">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="url(#grad4)"/>
+              <text x="20" y="28" font-size="24" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">G</text>
+              <defs>
+                <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#44a08d;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h1 class="brand"><a href="index.html" style="text-decoration: none; color: inherit;">Gelgrems</a></h1>
+        </div>
+        <nav class="nav-actions">
+          <a href="index.html" class="nav-link">Shop</a>
+          <a href="products.html" class="nav-link">Products</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-hero contact-hero">
+        <h2>Get In Touch</h2>
+        <p>We'd love to hear from you. Reach out with any questions or feedback.</p>
+      </section>
+
+      <section class="contact-wrapper">
+        <div class="contact-form-section">
+          <h3>Send us a Message</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-info-section">
+          <h3>Contact Information</h3>
+          
+          <div class="info-card">
+            <h4>📞 Phone</h4>
+            <p><a href="tel:+2347013223028">07013223028</a></p>
+            <p><a href="tel:+2348030935729">08030935729</a></p>
+          </div>
+
+          <div class="info-card">
+            <h4>📧 Email</h4>
+            <p><a href="mailto:geraldmudab@gmail.com">geraldmudab@gmail.com</a></p>
+          </div>
+
+          <div class="info-card">
+            <h4>🕐 Business Hours</h4>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p>Saturday: 10:00 AM - 4:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+
+          <div class="info-card">
+            <h4>📍 Location</h4>
+            <p>Lagos, Nigeria</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Gelgrems</h4>
+          <p>Premium quality snacks, responsibly sourced and carefully crafted.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Shop</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p>Phone: 07013223028 | 08030935729</p>
+          <p>Email: geraldmudab@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gelgrems. Built with ♥</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector('.contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! We will get back to you soon.');
+        document.querySelector('.contact-form').reset();
+      });
+    </script>
+  </body>
+</html>

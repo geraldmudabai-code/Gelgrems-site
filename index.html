@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gelgrems — Premium Snacks</title>
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  <body class="shop-page">
+    <header class="site-header shop-header">
+      <div class="container header-inner">
+        <div class="logo-wrapper">
+          <div class="logo">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="url(#grad1)"/>
+              <text x="20" y="28" font-size="24" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">G</text>
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#57c9c5;stop-opacity:1" />
+                  <stop offset="100%" style="stop-color:#076e6b;stop-opacity:1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h1 class="brand"><a href="index.html" style="text-decoration: none; color: inherit;">Gelgrems</a></h1>
+        </div>
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search products..." />
+        </div>
+        <nav class="nav-actions">
+          <a href="index.html" class="nav-link active">Shop</a>
+          <a href="products.html" class="nav-link">Products</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+          <select id="categoryFilter">
+            <option value="all">All categories</option>
+          </select>
+          <button id="cartToggle" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Quality products, responsibly sourced</h2>
+        <p>Browse a small demo catalogue and try the client-side cart.</p>
+      </section>
+
+      <section>
+        <div id="productsGrid" class="products-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <aside id="cartPanel" class="cart-panel" aria-hidden="true">
+      <div class="cart-header">
+        <h3>Your cart</h3>
+        <button id="closeCart">Close</button>
+      </div>
+      <ul id="cartItems" class="cart-items"></ul>
+      <div class="cart-footer">
+        <div class="cart-total">Total: <strong id="cartTotal">$0.00</strong></div>
+        <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+      </div>
+    </aside>
+
+    <div id="overlay" class="overlay" hidden></div>
+
+    <!-- In-page modal (replaces alert/confirm) -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+      <div class="modal-panel">
+        <div class="modal-body">
+          <h3 id="modalTitle"></h3>
+          <p id="modalMessage"></p>
+        </div>
+        <div class="modal-actions">
+          <button id="modalCancel" class="btn">Cancel</button>
+          <button id="modalConfirm" class="btn primary">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About Gelgrems</h4>
+          <p>Premium quality snacks, responsibly sourced and carefully crafted for your enjoyment.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Shop</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><strong>Phone:</strong><br><a href="tel:+2347013223028">07013223028</a> | <a href="tel:+2348030935729">08030935729</a></p>
+          <p><strong>Email:</strong><br><a href="mailto:geraldmudab@gmail.com">geraldmudab@gmail.com</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-icon" title="Facebook">f</a>
+            <a href="#" class="social-icon" title="Twitter">𝕏</a>
+            <a href="#" class="social-icon" title="Instagram">📷</a>
+            <a href="#" class="social-icon" title="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gelgrems. All rights reserved. Built with ♥</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
